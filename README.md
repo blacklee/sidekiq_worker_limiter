@@ -43,7 +43,7 @@ Then this `PingWorker` will be restricted to running **1** instance, no matter h
 
 And you can change the limited value by calling `SidekiqWorkerLimiter::HelpWorkers::ChangeMaxWorker.perform_async('PingWorker', 3)`.
 
-There're some other options in `SidekiqWorkerLimiter.boot!`, check it in [lib/sidekiq_worker_limiter.rb](lib/sidekiq_worker_limiter.rb) or [spec/sidekiq_helper.rb](spec/sidekiq_helper.rb).
+There're some other options in `SidekiqWorkerLimiter.boot!`, check it in [lib/sidekiq_worker_limiter.rb](lib/sidekiq_worker_limiter.rb) or [test/sidekiq_helper.rb](test/sidekiq_helper.rb).
 
 ## Tips
 
@@ -61,7 +61,7 @@ run `bundler install --standalone` to install dependencies.
 
 1. Starting server by `bundle exec sidekiq -r ./test/sidekiq_server_helper.rb`
 
-2. Starting client to add jobs `bundle exec ruby spec/sidekiq_client_helper.rb`
+2. Starting client to add jobs `bundle exec ruby test/sidekiq_client_helper.rb`
 
 test workers are very simple, just sleep a random time and print log to check the `running_count` and `max_count`:
 - test/workers/ping_worker.rb
