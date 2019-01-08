@@ -43,7 +43,7 @@ Then this `PingWorker` will be restricted to running **1** instance, no matter h
 
 And you can change the limited value by calling `SidekiqWorkerLimiter::HelpWorkers::ChangeMaxWorker.perform_async('PingWorker', 3)`.
 
-There're some other options in `SidekiqWorkerLimiter.boot!`, check it in [lib/sidekiq_worker_limiter.rb](lib/sidekiq_worker_limiter.rb) or [test/sidekiq_helper.rb](test/sidekiq_helper.rb).
+There're some other options in `SidekiqWorkerLimiter.boot!`, check it in [lib/sidekiq_worker_limiter.rb](lib/sidekiq_worker_limiter.rb) or [test/sidekiq_server_helper.rb](test/sidekiq_server_helper.rb).
 
 ## Tips
 
